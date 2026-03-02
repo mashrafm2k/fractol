@@ -8,9 +8,6 @@ void	handle_error(void)
 	exit(1);
 }
 
-/*
-** Maps a value from [0, old_max] to [new_min, new_max].
-*/
 double	map(double val, double new_min, double new_max, double old_max)
 {
 	return ((new_max - new_min) * val / old_max + new_min);
@@ -29,8 +26,10 @@ double	ft_atof(char *s)
 	pow = 1;
 	while (*s == ' ' || (*s >= 9 && *s <= 13))
 		s++;
+	if (*s == '-')
+		sign = -1;
 	if (*s == '-' || *s == '+')
-		sign = (*s++ == '-') ? -1 : 1;
+		s++;
 	while (*s >= '0' && *s <= '9')
 		int_part = int_part * 10 + (*s++ - '0');
 	if (*s == '.')

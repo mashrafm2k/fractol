@@ -1,10 +1,5 @@
 #include "fractol.h"
 
-/*
-** Bernstein polynomial smooth coloring.
-** Maps iteration count to an RGB value using polynomial curves,
-** producing a smooth "psychedelic" gradient effect.
-*/
 int	get_color(int iter, t_fractal *f)
 {
 	double	t;

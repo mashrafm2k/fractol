@@ -1,11 +1,9 @@
 NAME        = fractol
 
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -Imlx
 
-# Uncomment the correct line for your system:
-MLX_FLAGS   = -Lmlx -lmlx -framework OpenGL -framework AppKit
-# MLX_FLAGS = -Lmlx -lmlx -L/usr/lib -Imlx -lX11 -lXext -lm
+MLX_FLAGS = -Lmlx -lmlx -L/usr/lib -Imlx -lX11 -lXext -lm
 
 MLX_DIR     = mlx
 

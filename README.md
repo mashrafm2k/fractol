@@ -124,3 +124,11 @@ Claude (Anthropic) was used during this project for the following tasks:
 - **Documentation** — generating this README.
 
 All logic, mathematical understanding, and final implementation decisions were reviewed and validated by the student.
+
+-------------------------------------------------------------------------
+
+## Author
+
+**42 student:** `moashraf`
+
+Part of the **42 Abu Dhabi** curriculum.

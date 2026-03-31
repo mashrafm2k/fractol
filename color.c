@@ -1,5 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   color.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moashraf <moashraf@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/29 18:37:15 by moashraf          #+#    #+#             */
+/*   Updated: 2026/03/29 18:37:19 by moashraf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
+/*
+** Bernstein polynomial smooth coloring.
+** Maps iteration count to an RGB value using polynomial curves,
+** producing a smooth "psychedelic" gradient effect.
+*/
 int	get_color(int iter, t_fractal *f)
 {
 	double	t;

@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hooks.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moashraf <moashraf@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/29 18:37:51 by moashraf          #+#    #+#             */
+/*   Updated: 2026/03/29 18:44:37 by moashraf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 int	close_handler(t_fractal *f)
 {
 	mlx_destroy_image(f->mlx_ptr, f->img.img_ptr);
 	mlx_destroy_window(f->mlx_ptr, f->win_ptr);
-	mlx_destroy_display(f->mlx_ptr);
 	free(f->mlx_ptr);
 	exit(0);
 	return (0);

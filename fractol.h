@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fractol.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moashraf <moashraf@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/29 18:37:45 by moashraf          #+#    #+#             */
+/*   Updated: 2026/03/31 12:26:45 by moashraf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
 # include <stdlib.h>
 # include <unistd.h>
 # include <math.h>
-# include "mlx.h"
+# include <pthread.h>
+# include "minilibx-linux/mlx.h"
 
 # define WIDTH 800
 # define HEIGHT 800
-
+# define NUM_THREADS 12
 # define MANDELBROT 1
 # define JULIA 2
 
@@ -41,10 +54,23 @@ typedef struct s_fractal
 	int			iterations;
 }	t_fractal;
 
+typedef struct s_thread
+{
+	t_fractal	*fractal;
+	int			y_start;
+	int			y_end;
+}	t_thread;
+
 /* init.c */
 void		fractal_init(t_fractal *f);
 
+/* fractal_math.c */
+int			iterate(t_complex z, t_complex c, int max_iter);
+int			in_mandelbrot_bulb(t_complex c);
+
 /* render.c */
+void		handle_pixel(int x, int y, t_fractal *f);
+int			dynamic_iterations(double zoom);
 void		fractal_render(t_fractal *f);
 
 /* hooks.c */

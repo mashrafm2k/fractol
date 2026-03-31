@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moashraf <moashraf@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/29 18:37:57 by moashraf          #+#    #+#             */
+/*   Updated: 2026/03/29 21:27:54 by moashraf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 static void	fractal_defaults(t_fractal *f)
@@ -5,7 +17,7 @@ static void	fractal_defaults(t_fractal *f)
 	f->zoom = 1.0;
 	f->shift_x = 0.0;
 	f->shift_y = 0.0;
-	f->iterations = 100;
+	f->iterations = 50;
 }
 
 void	fractal_init(t_fractal *f)

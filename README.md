@@ -30,7 +30,6 @@ Additional optimizations include:
 ### Requirements
 
 - A C compiler (`cc`)
-- MiniLibX (place in a folder named `minilibx-linux/` at the project root)
 - **Linux**: `libX11` and `libXext` development packages
 
 ```bash
